@@ -28,6 +28,9 @@ public class Database {
     }
 
     public Database(String contents) {
+        /* TODO This constructor should take the contents of a CSV file
+            and initialize the memmber variables of the Database class.
+        */
         String[] rows = contents.split("\n");
         this.colNames = rows[0].split(",");
         int numCols = this.colNames.length;
@@ -38,12 +41,18 @@ public class Database {
     }
 
     public String getValue(String columnName, int row) {
+        /* TODO: This method should return the data contained on row "row"
+        and the column matching @columname
+        */
+        // find the index of this column
         int index = -1;
         for (int i = 0; i < this.colNames.length; i++)
             if (this.colNames[i].equals(columnName)) {
                 index = i;
                 break;
             }
+        // return the element at given index
         return this.data[row][index];
     }
+
 }
