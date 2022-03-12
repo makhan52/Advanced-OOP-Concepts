@@ -1,25 +1,38 @@
 import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
 
+import java.math.BigDecimal;
+
 public class Database {
-    /* TODO 
-Declare a member variable that can 
-be EASILY set from the constructor. */
+    private JsonObject db;
+
 
     public Database(JsonObject data){
-        /* TODO 
-set the memebr variable declared above.*/
+        this.db = data;
     }
 
     public JsonObject getRestaurant(String name){
-        /* TODO 
-Complete this method as specified. */
+        JsonArray r = (JsonArray) this.db.get("restaurants");
+        int id = 0;
+        for(int i = 0; i < r.toArray().length; i++){
+            JsonObject test = (JsonObject) r.get(i);
+            if(test.get("name").equals(name))
+                id = i;
+        }
+
+        JsonObject restStuff = (JsonObject) r.get(id);
+        return restStuff;
     }
 
     public double getAvgReviews(String name){
-        /* TODO 
-Complete this method as specified.
- The previous method may be of help. 
-*/
+        JsonObject r = getRestaurant(name);
+        JsonArray rev = (JsonArray) r.get("reviews");
+        double rate = 0;
+        for(int i=0; i < rev.toArray().length; i++){
+            JsonObject test = (JsonObject) rev.get(i);
+            BigDecimal tmp = (BigDecimal) test.get("rating");
+            rate += tmp.doubleValue();
+        }
+        return rate/rev.size();
     }
 }

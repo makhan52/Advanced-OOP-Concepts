@@ -1,17 +1,25 @@
-import com.github.cliftonlabs.json_simple.JsonObject;
+import java.io.*;
 
 public class Task {
-    public static void main(String[] args){
-        TVShowsDatabase ord = new TVShowsDatabase();
-        try {
-            JsonObject shows = ord.getShowsByName("simpsons");
-            String simpsons = ord.formatShowAsString(shows);
-            JsonObject kk = ord.getPeopleInShows("Ralph%20Maccio");
-            System.out.println(simpsons);
-            System.out.println(kk.get("result"));
-            ord.saveShows(simpsons,"simpsons.txt");
-        }catch (Exception e){
+    public static void main(String[] ar) {
+        Task t = new Task();
+        Database d = t.readCSV("./resources/iris-data.csv");
+    }
+
+    public Database readCSV(String filename) {
+        String contents = "";
+        try (InputStream in = new FileInputStream(filename)){
+            byte[] buffer = new byte[in.available()];
+            int lengthRead = in.read(buffer);
+            while (lengthRead != -1) {
+                contents += new String(buffer);
+                lengthRead = in.read(buffer);
+            }
+            in.close();
+        } catch (IOException e) {
             e.printStackTrace();
+            System.exit(-1);
         }
+        return new Database(contents);
     }
 }

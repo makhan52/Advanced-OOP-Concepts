@@ -14,9 +14,20 @@ public class Task {
         System.out.println(db.getAvgReviews("Casa Enrique"));
     }
 
-    public JsonObject readJson(String fi/* TODO: create a JSON object with the contents of  "filename". You can use the method below to help you read the file. */
-       /* Put in the variable that should be returned. */em.exit(-1);
+    public String readFile(String path){
+        String contains = "";
+        try(BufferedReader br = new BufferedReader(new FileReader(path))) {
+            int val = 0;
+            while ((val = br.read()) != -1)
+                contains += (char) val;
+        }catch(IOException e) {
+            e.printStackTrace();
         }
-        return content;
+        return contains;
+    }
+    public JsonObject readJson(String filename){
+        String var = readFile(filename);
+        JsonObject contains = (JsonObject) Jsoner.deserialize(var,new JsonObject());
+        return contains;
     }
 }
