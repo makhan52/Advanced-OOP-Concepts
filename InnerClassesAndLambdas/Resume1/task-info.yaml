@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 209
-    length: 80
+    length: 171
     placeholder_text: |-
       /* TODO */
       Create an education object. Schoo is NEIU, major is Computer Science.
@@ -12,12 +12,12 @@ files:
       length: 80
       offset: 209
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: Resume.Education ed = r.new Education("NEIU", "Computer
       Science");
-  - offset: 297
-    length: 54
+  - offset: 380
+    length: 9
     placeholder_text: |-
       /* TODO */
       add this education object to the resume "r"
@@ -25,11 +25,11 @@ files:
       length: 54
       offset: 297
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: ' r.addEducation(ed);'
-  - offset: 360
-    length: 67
+  - offset: 380
+    length: 9
     placeholder_text: |-
       /* TODO */
       Create a new Experience object and add it to the resume.
@@ -37,13 +37,13 @@ files:
       length: 67
       offset: 360
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       Resume.Experience ex = new Resume.Experience("Barista", 2017,2018);
               r.addExperience(ex);
-  - offset: 452
-    length: 83
+  - offset: 456
+    length: 0
     placeholder_text: |-
       /* TODO */
       Create a new experience object on the fly, inside the addExperiece call.
@@ -51,10 +51,10 @@ files:
       length: 83
       offset: 452
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: new Resume.Experience("Cashier",2018,2019)
-  - offset: 562
+  - offset: 483
     length: 66
     placeholder_text: |-
       /* TODO */
@@ -64,7 +64,7 @@ files:
       offset: 562
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: new Resume.Experience("Associate",2019,2021)
   text: |-
     public class Task {
@@ -158,7 +158,7 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 66
+    length: 970
     placeholder_text: |-
       /*TODO*/
       Create a Person class exactly as in Task 1. (Copy/Paste).
@@ -166,8 +166,8 @@ files:
       length: 66
       offset: 0
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       import java.time.LocalDate;
       import java.time.Period;
@@ -225,7 +225,7 @@ files:
   visible: true
   placeholders:
   - offset: 74
-    length: 88
+    length: 1377
     placeholder_text: |-
       /* TODO */
       Create a public member inner class Education according to the specifications.
@@ -234,7 +234,7 @@ files:
       offset: 74
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |2-
           public class Education{
               String school;
@@ -249,7 +249,7 @@ files:
                   return major+" at "+school;
               }
           }
-  - offset: 164
+  - offset: 1453
     length: 97
     placeholder_text: |-
       /* TODO */
@@ -259,7 +259,7 @@ files:
       offset: 164
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |2-
           public static class Experience{
               int fromYear;
@@ -274,7 +274,7 @@ files:
                   return fromYear+" - "+toYear+":"+title;
               }
           }
-  - offset: 263
+  - offset: 1552
     length: 106
     placeholder_text: |-
       /* TODO */
@@ -284,12 +284,12 @@ files:
       offset: 263
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |2-
           private Person p;
           private List<Education> ed;
           private List<Experience> ex;
-  - offset: 399
+  - offset: 1688
     length: 124
     placeholder_text: |-
       /* TODO */
@@ -299,13 +299,13 @@ files:
       offset: 399
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |2-
               this.p = p;
               ed = new ArrayList<>();
               ex = new ArrayList<>();
-  - offset: 531
-    length: 97
+  - offset: 1819
+    length: 1
     placeholder_text: |-
       /* TODO */
       Create the addEducation, addExperience and override the toString methods as specified.
@@ -313,8 +313,8 @@ files:
       length: 97
       offset: 531
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |2-
           public void addEducation(Education e){
               ed.add(e);
@@ -359,5 +359,8 @@ files:
 
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Fri, 18 Mar 2022 22:15:38 UTC
 record: -1

@@ -3,8 +3,8 @@ files:
 - name: src/Task.java
   visible: true
   placeholders:
-  - offset: 64
-    length: 176
+  - offset: 439
+    length: 150
     placeholder_text: |-
       /* TODO */
       Copy the Task from task 2 here and add experiences where the end years are not in order. Watch it print the resume with the dates in order from most recent to least.
@@ -13,7 +13,7 @@ files:
       offset: 64
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |2-
               Person p = new Person("Kim Possible","2000-01-01");
               p.setPosition("Associate", 34000);
@@ -102,7 +102,7 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 62
+    length: 969
     placeholder_text: |-
       /* TODO */
       Copy the Person class from Task 2 here. Copy->Paste
@@ -110,8 +110,8 @@ files:
       length: 62
       offset: 0
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |
       import java.time.LocalDate;
       import java.time.Period;
@@ -169,7 +169,7 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 73
+    length: 1440
     placeholder_text: |-
       /* TODO */
       The imports will self populate. You don't have to do anything.
@@ -177,15 +177,15 @@ files:
       length: 73
       offset: 0
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       import java.util.ArrayList;
       import java.util.Comparator;
       import java.util.List;
       import java.util.PriorityQueue;
-  - offset: 97
-    length: 92
+  - offset: 1436
+    length: 16
     placeholder_text: |-
       /* TODO */
       Copy the two inner classes of Resume exactly as they were in Task 2. Copy->paste.
@@ -194,7 +194,7 @@ files:
       offset: 97
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |2
           public class Education{
               String school;
@@ -223,8 +223,8 @@ files:
                   return fromYear+" - "+toYear+":"+title;
               }
           }
-  - offset: 190
-    length: 73
+  - offset: 1453
+    length: 63
     placeholder_text: |-
       /* TODO */
       Create a member variable of type Person (exactly as in task 2)
@@ -233,10 +233,10 @@ files:
       offset: 190
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '    private Person p;'
-  - offset: 264
-    length: 80
+  - offset: 1514
+    length: 2
     placeholder_text: |-
       /* TODO */
       Create a List to hold values of type Education (exactly as in task 2)
@@ -245,9 +245,9 @@ files:
       offset: 264
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '    private List<Education> ed;'
-  - offset: 345
+  - offset: 1514
     length: 72
     placeholder_text: |-
       /* TODO */
@@ -257,9 +257,9 @@ files:
       offset: 345
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '    private PriorityQueue<Experience> ex;'
-  - offset: 447
+  - offset: 1620
     length: 49
     placeholder_text: |-
       /* TODO */
@@ -269,9 +269,9 @@ files:
       offset: 447
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '        this.p = p;'
-  - offset: 497
+  - offset: 1670
     length: 54
     placeholder_text: |-
       /* TODO */
@@ -281,9 +281,9 @@ files:
       offset: 497
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: '        ed = new ArrayList<>();'
-  - offset: 552
+  - offset: 1725
     length: 131
     placeholder_text: |-
       /* TODO */
@@ -293,7 +293,7 @@ files:
       offset: 552
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |2-
               ex = new PriorityQueue<>(new Comparator<Experience>() {
                   @Override
@@ -301,7 +301,7 @@ files:
                       return t1.toYear - experience.toYear;
                   }
               });
-  - offset: 691
+  - offset: 1864
     length: 103
     placeholder_text: |-
       /* TODO */
@@ -310,11 +310,11 @@ files:
       length: 103
       offset: 691
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: '    public PriorityQueue getExperience(){return ex;}'
-  - offset: 796
-    length: 131
+  - offset: 1969
+    length: 2
     placeholder_text: |-
       /* TODO */
       Implement the addEducation, addExperience and override the toString() methods exactly as you did in task 2 (Copy->Paste)
@@ -322,8 +322,8 @@ files:
       length: 131
       offset: 796
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |2-
           public void addEducation(Education e){
               ed.add(e);
@@ -375,5 +375,8 @@ files:
 
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Fri, 18 Mar 2022 22:19:26 UTC
 record: -1
